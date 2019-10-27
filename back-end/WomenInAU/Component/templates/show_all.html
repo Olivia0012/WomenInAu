@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Comments - Entities</a>
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+
+      <h3>New Entity (<a href = "{{ url_for('add_entity') }}">Add Entity
+         </a>)</h3>
+
+      <h3>New Entity (<a href = "{{ url_for('show_feedback') }}">show feedback of eId:2
+         </a>)</h3>
+
+<table>
+         <thead>
+            <tr>
+               <th>UID</th>
+               <th>EID</th>
+               <th>LOCATION</th>
+               <th>SUBDate</th>
+            </tr>
+         </thead>
+
+
+
+         <tbody>
+            {% for entity in EntityInfo %}
+               <tr>
+                  <td>{{ entity.uId }}</td>
+                  <td>{{ entity.eId }}</td>
+                  <td><a href ="{{ url_for('show_entity')}}">{{ entity.location }}<td></td>
+                  <td>{{ entity.subDate }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+
+ </table>
+
+
+   </body>
+</html>

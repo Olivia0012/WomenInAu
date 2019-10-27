@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>
+         Comments - Entities
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+
+<table>
+         <thead>
+            <tr>
+               <th>FID</th>
+               <th>ID</th>
+                 <th>EID</th>
+               <th>FEEDBACK</th>
+               <th>DATE</th>
+            </tr>
+         </thead>
+
+
+
+         <tbody>
+            {% for fb in feedback %}
+               <tr>
+                   <td>{{ fb.fId }}</td>
+                  <td>{{ fb.uId }}</td>
+                  <td>{{ fb.eId }}</td>
+                  <td>{{ fb.fb }}<td></td>
+                  <td>{{ fb.date }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+
+ </table>
+
+
+   </body>
+</html>

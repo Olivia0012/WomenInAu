@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+
+      <h3>
+         <a href = "{{ url_for('show_all') }}">Entity</a>
+      </h3>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+      <h3>New Entity (<a href = "{{ url_for('add_entity') }}">Add Entity
+         </a>)</h3>
+
+      <table>
+         <thead>
+
+         </thead>
+
+         <tbody>
+       <form action = "{{ request.path }}" method = "post">
+         <label for = "uId">UID</label><br>
+         <input type = "text" name = "uId" placeholder = "uId" value={{ entity.uId }}><br>
+         <label for = "title">title</label><br>
+         <input type = "text" value={{ entity.title }} name = "title" placeholder = "title" /><br>
+         <label for = "context">context</label><br>
+         <textarea name="context" placeholder="context" cols="50" rows="10"  value={{ entity.context }}> {{ entity.context }}</textarea><br>
+          <input type = "submit" value = "提交" />
+       </form>
+         </tbody>
+      </table>
+
+   </body>
+</html>

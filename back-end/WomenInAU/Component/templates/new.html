@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>New Entity</title>
+</head>
+   <body>
+    <h3>Add New Entity</h3>
+      <hr/>
+
+      {%- for category, message in get_flashed_messages(with_categories = true) %}
+         <div class = "alert alert-danger">
+            {{ message }}
+         </div>
+      {%- endfor %}
+
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "eId">EID</label><br>
+         <input type = "text" name = "eId" placeholder = "eId" /><br>
+         <label for = "uId">UID</label><br>
+         <input type = "text" name = "uId" placeholder = "uId" /><br>
+         <label for = "location">LOC</label><br>
+         <input type = "text" name = "location" placeholder = "location" /><br>
+         <label for = "subDate">DATE</label><br>
+         <input type = "text" name = "subDate" placeholder = "subDate" /><br>
+           <label for = "status">status</label><br>
+         <input type = "text" name = "status" placeholder = "status" /><br>
+         <input type = "submit" value = "提交" />
+      </form>
+
+   </body>
+</html>
+

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Women In Australia</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>Australian Women's Archives Project</p>
+    <h1>The Australian Women's Register</h1>
+    <p>An initiative of The National Foundation for Australian Women(NFAW) in conjunction with The Universtity of
+        Melbourne</p>
+</div>
+
+<nav class="navbar navbar-defalt">
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" data-toggle="modal" data-target="#myModal">WomenInAustralia</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li ><a href="#">HOME</a></li>
+            <li><a href="myentity">MY ENTITIES<span class="badge">50</span></a></li>
+
+            <li class="active"><a href="entities">SUBMISSIONS<span class="badge">50</span></a></li>
+            <li>
+                <a href="account">ACCOUNTS <span class="badge">50</span></a>
+            </li>
+
+
+
+        <li class="dropdown" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">ENTITIES<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">CONTRIBUTE</a></li>
+                    <li><a href="#">MY ENTITIES</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">SUBMISSIONS</a></li>
+                    <li class="disabled"><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGNUP</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> SIGNIN</a></li>
+        </ul>
+
+    </div>
+</div>
+
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-8 col-md-offset-2" align="center">
+            <h2>SUBMISSIONS</h2>
+            <table class="table">
+                <caption></caption>
+                <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>TYPE</th>
+                    <th>NAME</th>
+                    <th>PROCESS</th>
+                    <th>DIED DATE</th>
+                    <th>OPERATION</th>
+                </tr>
+                </thead>
+                <tbody>
+                 {% for entity in EntityInfo %}
+               <tr>
+                   <td>{{ entity.eId }}</td>
+                  <td>{{ entity.eType }}</td>
+                  <td>{{ entity.eName }}</td>
+                  <td>{{ entity.eStatus }}</td>
+                  <td>{{ entity.eEndDate }}</td>
+                   <td><a href ="{{ url_for('show_entity')}}">view</a></td>
+               </tr>
+                {% endfor %}
+                <tr class="active">
+                    <td>产品1</td>
+                    <td>23/11/2013</td>
+                    <td>待发货</td>
+                    <td>产品1</td>
+                    <td>23/11/2013</td>
+                    <td>待发货</td>
+                </tr>
+                <tr class="success">
+                    <td>产品2</td>
+                    <td>10/11/2013</td>
+                    <td>发货中</td>
+                    <td>产品2</td>
+                    <td>10/11/2013</td>
+                    <td>发货中</td>
+                </tr>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+
+                <tr class="danger">
+                    <td>产品4</td>
+                    <td>20/10/2013</td>
+                    <td>已退货</td>
+                    <td>产品4</td>
+                    <td>20/10/2013</td>
+                    <td>已退货</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>底部内容</p>
+</div>
+
+
+<!-- 模态框（Modal） -->
+<h2>模态框（Modal）插件事件</h2>
+<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">开始演示模态框</button>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+            </div>
+            <div class="modal-body">点击关闭按钮检查事件功能。</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">提交更改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<script>
+$(function() {
+    $('#myModal').modal('hide')
+});
+</script>
+<script>
+$(function() {
+    $('#myModal').on('hide.bs.modal',
+    function() {
+        alert('嘿，我听说您喜欢模态框...');
+    })
+});
+
+$(function() {
+    $('#myModal').on('hide.bs.modal',
+    function() {
+        alert('嘿，我听说您喜欢模态框...');
+    })
+});
+</script>
+
+
+</body>
+</html>

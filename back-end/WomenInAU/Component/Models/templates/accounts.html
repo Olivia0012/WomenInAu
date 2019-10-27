@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Women In Australia</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>Australian Women's Archives Project</p>
+    <h1>The Australian Women's Register</h1>
+    <p>An initiative of The National Foundation for Australian Women(NFAW) in conjunction with The Universtity of
+        Melbourne</p>
+</div>
+
+
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">WomenInAustralia</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="myentity">MY ENTITIES<span class="badge">50</span></a></li>
+
+            <li class="active"><a href="entities">SUBMISSIONS<span class="badge">50</span></a></li>
+            <li>
+                <a href="account">ACCOUNTS <span class="badge">50</span></a>
+            </li>
+
+
+
+        <li class="dropdown" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome,<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="disabled"><a href="#"></a></li>
+                    <li><a href="#">MY PROFILES</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">LOG OUT</a></li>
+                    <li class="disabled"><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGNUP</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> SIGNIN</a></li>
+        </ul>
+
+    </div>
+</div>
+
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-8 col-md-offset-2" align="center">
+            <h2>ACCOUNTS</h2>
+            <table class="table">
+                <caption></caption>
+                <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>EMAIL</th>
+                    <th>NAME</th>
+                    <th>ROLE</th>
+                    <th>OPERATION</th>
+                </tr>
+                </thead>
+                <tbody>
+                 {% for user in UserInfo %}
+               <tr>
+                   <td>{{ user.uId }}</td>
+                  <td>{{ user.email }}</td>
+                  <td>{{ user.uName }}</td>
+                  <td>{{ user.role }}</td>
+                   <td><a href ="{{ url_for('show_entity')}}">view</a></td>
+               </tr>
+                {% endfor %}
+                <tr class="active">
+                    <td>产品1</td>
+                    <td>23/11/2013</td>
+                    <td>待发货</td>
+                    <td>23/11/2013</td>
+                    <td>待发货</td>
+                </tr>
+                <tr class="success">
+                    <td>产品2</td>
+                    <td>10/11/2013</td>
+                    <td>产品2</td>
+                    <td>10/11/2013</td>
+                    <td>发货中</td>
+                </tr>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="warning">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="warning">
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+                <tr class="">
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>产品3</td>
+                    <td>20/10/2013</td>
+                    <td>待确认</td>
+                </tr>
+
+                <tr class="danger">
+                    <td>产品4</td>
+                    <td>已退货</td>
+                    <td>产品4</td>
+                    <td>20/10/2013</td>
+                    <td>已退货</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>底部内容</p>
+</div>
+</body>
+</html>
