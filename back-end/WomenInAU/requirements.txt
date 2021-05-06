@@ -13,7 +13,7 @@ docutils==0.11
 ec2-hibinit-agent==1.0.0
 ecdsa==0.13.3
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 futures==3.0.3
 hibagent==1.0.0
 iniparse==0.3.1
