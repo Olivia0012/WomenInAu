@@ -15,7 +15,7 @@
     "@atlaskit/icon": "^19.0.6",
     "@material-ui/core": "^4.5.0",
     "@zeit/next-css": "^1.0.1",
-    "aws-sdk": "^2.543.0",
+    "aws-sdk": "^2.814.0",
     "bcrypt": "^3.0.6",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",
