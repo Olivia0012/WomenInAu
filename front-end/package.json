@@ -24,7 +24,7 @@
     "emotion": "^10.0.17",
     "file-saver": "^2.0.2",
     "isomorphic-unfetch": "^3.0.0",
-    "jszip": "^3.2.2",
+    "jszip": "^3.7.0",
     "libphonenumber-js": "^1.7.25",
     "mdbreact": "^4.20.0",
     "next": "^9.0.5",
